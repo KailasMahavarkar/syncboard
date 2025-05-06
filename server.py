@@ -7,10 +7,21 @@ import time
 app = Flask(__name__)
 socketio = SocketIO(app, cors_allowed_origins="*")
 
+
+@socketio.on('connect')
+def handle_connect():
+    sid = request.sid
+
+
+@socketio.on('disconnect')
+def handle_disconnect():
+    sid = request.sid
+
+
 @app.route('/status')
 def status():
     return {
-        "MI vs RCB Final":"MI WINS"
+        "ping": "pong"
     }
 
 
