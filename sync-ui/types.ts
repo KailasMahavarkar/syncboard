@@ -1,0 +1,15 @@
+export const LangList = {
+    javascript: "javascript",
+    html: "html",
+    css: "css",
+    json: "json",
+    python: "python",
+    xml: "xml",
+    sql: "sql",
+    java: "java",
+    rust: "rust",
+    cpp: "cpp",
+    php: "php",
+    wast: "wast",
+    lezer: "lezer",
+};

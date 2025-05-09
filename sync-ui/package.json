@@ -1,34 +1,51 @@
 {
-  "name": "sync-ui",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@tailwindcss/vite": "^4.1.4",
-    "daisyui": "^5.0.35",
-    "lucide-react": "^0.503.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "socket.io-client": "^4.8.1",
-    "tailwindcss": "^4.1.4"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.22.0",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react-swc": "^3.8.0",
-    "eslint": "^9.22.0",
-    "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-react-refresh": "^0.4.19",
-    "globals": "^16.0.0",
-    "typescript": "~5.7.2",
-    "typescript-eslint": "^8.26.1",
-    "vite": "^6.3.1"
-  }
+	"name": "sync-ui",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@tailwindcss/vite": "^4.1.4",
+		"daisyui": "^5.0.35",
+		"lucide-react": "^0.503.0",
+		"react": "^19.0.0",
+		"react-dom": "^19.0.0",
+		"socket.io-client": "^4.8.1",
+		"tailwindcss": "^4.1.4",
+		"@fortawesome/fontawesome-svg-core": "^6.2.0",
+		"@fortawesome/free-brands-svg-icons": "^6.2.0",
+		"@fortawesome/free-regular-svg-icons": "^6.2.0",
+		"@fortawesome/free-solid-svg-icons": "^6.2.0",
+		"@fortawesome/react-fontawesome": "^0.2.0",
+		"@mdx-js/loader": "^2.2.1",
+		"@uiw/codemirror-extensions-langs": "^4.19.6",
+		"@uiw/codemirror-theme-github": "^4.19.5",
+		"@uiw/react-codemirror": "^4.15.1",
+		"@codemirror/lang-cpp": "^6.0.1",
+		"@codemirror/lang-css": "^6.0.0",
+		"@codemirror/lang-html": "^6.1.2",
+		"@codemirror/lang-javascript": "^6.1.0",
+		"@codemirror/lang-json": "^6.0.1",
+		"@codemirror/lang-python": "^6.1.1",
+		"@codemirror/language": "^6.4.0",
+		"@codemirror/view": "^6.7.2"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.22.0",
+		"@types/react": "^19.0.10",
+		"@types/react-dom": "^19.0.4",
+		"@vitejs/plugin-react-swc": "^3.8.0",
+		"eslint": "^9.22.0",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"globals": "^16.0.0",
+		"typescript": "~5.7.2",
+		"typescript-eslint": "^8.26.1",
+		"vite": "^6.3.1"
+	}
 }
