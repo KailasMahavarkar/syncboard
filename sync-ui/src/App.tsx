@@ -1,7 +1,4 @@
-"use client"
-
 import type React from "react"
-
 import { useState, useRef, useEffect } from "react"
 import CodeMirror from "../components/CodeMirror"
 
@@ -14,7 +11,6 @@ const SyncBoardApp = () => {
     const [data, setData] = useState("")
     const [drawingData, setDrawingData] = useState<ImageData | null>(null)
 
-    // Initialize canvas and handle resizing
     useEffect(() => {
         const canvas = canvasRef.current
         if (!canvas) return
@@ -39,14 +35,10 @@ const SyncBoardApp = () => {
             }
         }
 
-        // Set initial canvas size
         resizeCanvas()
-
-        // Set stroke style based on current color
         context.strokeStyle = color
         context.lineWidth = 2
 
-        // Add resize event listener
         window.addEventListener("resize", resizeCanvas)
 
         return () => {
@@ -54,7 +46,6 @@ const SyncBoardApp = () => {
         }
     }, [drawingData, color, notebookMode])
 
-    // Restore drawing when switching back to drawing mode
     useEffect(() => {
         if (!notebookMode && drawingData) {
             const canvas = canvasRef.current
@@ -77,14 +68,11 @@ const SyncBoardApp = () => {
         const context = canvas.getContext("2d")
         if (!context) return
 
-        // get current bounding box of the canvas
         const { left, top } = canvas.getBoundingClientRect()
-
-        // get current mouse position
         const x = e.clientX - left
         const y = e.clientY - top
 
-        setIsDrawing(true) // we are drawing
+        setIsDrawing(true)
 
         context.beginPath()
         context.moveTo(x, y)
@@ -150,12 +138,10 @@ const SyncBoardApp = () => {
         if (!context) return
 
         context.clearRect(0, 0, canvas.width, canvas.height)
-        setDrawingData(null) // Clear saved image data too
+        setDrawingData(null) 
     }
 
-    // Handle mode switching with state preservation
     const handleModeToggle = () => {
-        // If switching from draw to code, save the canvas state first
         if (!notebookMode) {
             const canvas = canvasRef.current
             if (canvas) {
@@ -171,7 +157,6 @@ const SyncBoardApp = () => {
             }
         }
 
-        // Toggle the mode
         setNotebookMode(!notebookMode)
     }
 
